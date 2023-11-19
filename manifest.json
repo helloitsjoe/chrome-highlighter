@@ -1,0 +1,17 @@
+{
+  "name": "Highlighter",
+  "description": "Use context menu to highlight content on a page",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "storage"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
