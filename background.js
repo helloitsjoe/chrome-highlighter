@@ -23,7 +23,7 @@ createContextMenuItem("black", "white");
 // });
 
 chrome.contextMenus.onClicked.addListener((item, tab) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  chrome.tabs.query({ active: true, currentWindow: true }, () => {
     chrome.tabs.sendMessage(tab.id, { action: item.menuItemId });
   });
 });

@@ -2,9 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    globals: {
-      chrome: "readonly",
-    },
+  },
+  globals: {
+    chrome: "readonly",
   },
   extends: "eslint:recommended",
   overrides: [
